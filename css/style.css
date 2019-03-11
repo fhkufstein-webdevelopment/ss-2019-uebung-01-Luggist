@@ -4,11 +4,12 @@
 body {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:14px;
-
 }
+
 .inner {
     margin: auto;
     width: 990px;
+
 }
 
 .logo {
@@ -30,17 +31,53 @@ body {
     margin-top: 10px;
 }
 
-.mainNavi {
-    display: flex;
-    font-size: 20px;
-    padding-top: 30px;
-}
-.mainNavi ul li a{
-    display: inline;
+.mainNavi ul li{
     list-style: none;
-    text-decoration: none;
+    border:black;
+    padding: 5px;
 }
 
+.mainNavi a {
+    float:left;
+    font-size: 20px;
+    padding-top: 30px;
+    text-align: left;
+    text-decoration: none;
+    color:#337ab7;
+}
+
+.level_1{
+    display: flex;
+    flex-direction: row;
+    color: #337ab7;
+    font-weight: bold;
+
+}
+.level_2{
+    display: none;
+    font-weight: normal;
+}
+
+.level_2 a {
+    background-color: white;
+    width: 100%;
+}
+
+.level_1 li:hover .level_2{
+    display: block;
+    text-align: left;
+    width:auto; /*hier könnte mann auch einen Wert vergeben damit alle Zellen gleich große werden z.Bsp. 300px */
+    padding-top: 50px;
+    padding-left:0;
+    margin-top:15px;
+    margin-left:0;
+    position: absolute;
+}
+
+.level_2 a:hover {
+    background-color: #337ab7;
+    color: white;
+}
 .stripe {
     display: inline-block;
     background-color:#337ab7;
